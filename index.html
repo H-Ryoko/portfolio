@@ -4,116 +4,125 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>樋田涼子のポートフォリオ</title>
     <link rel="stylesheet" href="assets/css/top.css">
   </head>
   <body>
     <section class="section-top">
-      <h1>RyokoHida<br>portfolio</h1>
+      <h1><span>R</span>yokoHida&nbsp;&nbsp;<br>portfolio</h1>
     </section>
-    <section class="section-aboutme">
+    <section id="aboutme" class="section-aboutme">
       <h2 class="title">About me</h2>
       <p class="section-aboutme__profile">
         兵庫県出身、福岡県在住の24歳。<br>大学卒業後、ソフトウェアメーカーでSEを１年間経験。<br>
         退職後デジタルハリウッドSTUDIO福岡でWEBデザインを学び、2020年11月に修了。
       </p>
-      <p>
+      <p class="section-aboutme__avispa">
         アビスパ福岡サポーター歴６年になります。
       </p>
+      <div class="btnarrow">
+        <a class="btnarrow__more" href="aboutme.html">view more</a>
+      </div>
     </section>
-    <section class="section-skill">
+    <section id="skill" class="section-skill">
       <h2 class="title">Skill</h2>
-      <div class="section-skill__contain">
-        <div class="section-skill__contain__first">
-          <div class="section-skill__contain__first__imgbox">
-            <img src="assets/image/icon/skill/png/html.png" alt="htmlのアイコン">
-            <img src="assets/image/icon/skill/png/css.png" alt="cssのアイコン">
-            <img src="assets/image/icon/skill/png/sass.png" alt="sassのアイコン">
+      <div class="section-skill__cards">
+        <div class="section-skill__cards__contain">
+          <div class="section-skill__cards__contain__first">
+            <img class="section-skill__cards__contain__first__singleimg" src="assets/image/icon/skill/png/responsive.png" alt="レスポンシブデザインのアイコン">
+            <p class="section-skill__cards__contain__first__title">responsive</p>
           </div>
-          <p>HTML/CSS（Scss）</p>
+          <p class="section-skill__cards__contain__description">
+            各デバイスに対応したレスポンシブなサイト設計が可能です。<br>どのデバイスで見てもきれいに見られることを意識しています。
+          </p>
         </div>
-        <p>
-          HTMLは適切なタグを使うこと、コードをきれいに書くことを心がけています。<br>cssは基本的な装飾はもちろん、scssでより効率的に書くことも可能です。
-        </p>
-      </div>
-      <div class="section-skill__contain">
-        <div class="section-skill__contain__first">
-          <div class="section-skill__contain__first__imgbox">
-            <img src="assets/image/icon/skill/png/js.png" alt="javascriptのアイコン">
-            <img src="assets/image/icon/skill/png/jquery.png" alt="jqueryのアイコン">
+        <div class="section-skill__cards__contain">
+          <div class="section-skill__cards__contain__first">
+            <img class="section-skill__cards__contain__first__singleimg" src="assets/image/icon/skill/png/wordpress.png" alt="wordpressのアイコン">
+            <p class="section-skill__cards__contain__first__title">WordPress</p>
           </div>
-          <p>JavaScript</p>
+          <p class="section-skill__cards__contain__description">
+            現在勉強中です。<br>卒業制作ではブログページをWordPressで作成し、静的サイトを連携することに挑戦しました。
+          </p>
         </div>
-        <p>
-          jQueryなどを使い、部分的に動かすような基本的なコードを書くことが可能です。<br>さらに動きのバリエーションを増やすため、現在勉強中です。
-        </p>
-      </div>
-
-      <!--GitHubのリンク-->
-      <div class="section-skill__contain">
-      </div>
-
-      <div class="section-skill__contain">
-        <div class="section-skill__contain__first">
-          <img src="assets/image/icon/skill/png/responsive.png" alt="レスポンシブデザインのアイコン">
-          <p>responsive</p>
+        <div class="section-skill__cards__contain">
+          <div class="section-skill__cards__contain__first">
+            <img class="section-skill__cards__contain__first__singleimg" src="assets/image/icon/skill/png/design.png" alt="デザインのアイコン">
+            <p class="section-skill__cards__contain__first__title">design</p>
+          </div>
+          <p class="section-skill__cards__contain__description">
+            デジタルハリウッドではwebサイト、バナーのデザインを学びました。<br>webサイトのワイヤーフレーム、デザインカンプはphotoshopで作成しています。
+          </p>
         </div>
-        <p>
-          各デバイスに対応したレスポンシブなサイト設計が可能です。<br>どのデバイスで見てもきれいに見られることを意識しています。
-        </p>
-      </div>
-      <div class="section-skill__contain">
-        <div class="section-skill__contain__first">
-          <img src="assets/image/icon/skill/png/wordpress.png" alt="wordpressのアイコン">
-          <p>WordPress</p>
+        <div class="section-skill__cards__contain">
+          <div class="section-skill__cards__contain__first">
+            <div class="section-skill__cards__contain__first__imgbox">
+              <img src="assets/image/icon/skill/png/html.png" alt="htmlのアイコン">
+              <img src="assets/image/icon/skill/png/css.png" alt="cssのアイコン">
+              <img src="assets/image/icon/skill/png/sass.png" alt="sassのアイコン">
+            </div>
+            <p class="section-skill__cards__contain__first__title">HTML/CSS（scss）</p>
+          </div>
+          <p class="section-skill__cards__contain__description">
+            HTMLは適切なタグを使うこと、コードをきれいに書くことを心がけています。<br>cssは基本的な装飾はもちろん、scssでより効率的に書くことも可能です。
+          </p>
         </div>
-        <p>
-          現在勉強中です。<br>卒業制作ではブログページをWordPressで作成し、静的サイトを連携することに挑戦しました。
-        </p>
-      </div>
-      <div class="section-skill__contain">
-        <div class="section-skill__contain__first">
-          <img src="assets/image/icon/skill/png/design.png" alt="デザインのアイコン">
-          <p>design</p>
+        <div class="section-skill__cards__contain">
+          <div class="section-skill__cards__contain__first">
+            <div class="section-skill__cards__contain__first__imgbox">
+              <img src="assets/image/icon/skill/png/js.png" alt="javascriptのアイコン">
+              <img src="assets/image/icon/skill/png/jquery.png" alt="jqueryのアイコン">
+            </div>
+            <p class="section-skill__cards__contain__first__title">JavaScript</p>
+          </div>
+          <p class="section-skill__cards__contain__description">
+            jQueryなどを使い、部分的に動かすような基本的なコードを書くことが可能です。<br>さらに動きのバリエーションを増やすため、現在勉強中です。
+          </p>
         </div>
-        <p>
-          デジタルハリウッドではwebサイト、バナーのデザインを学びました。<br>webサイトのワイヤーフレーム、デザインカンプはphotoshopで作成しています。
-        </p>
+        <!--GitHubのリンク-->
+        <div class="section-skill__cards__contain btnarrow">
+          <a class="btnarrow__more" href="https://github.com/H-Ryoko" target="blank">GitHub</a>
+        </div>
       </div>
     </section>
-    <section class="section-work">
+    <section id="work" class="section-work">
       <h2 class="title">Work</h2>
-      <a class="section-work__link-box">
-        <img src="assets/image/work/kanadou/work01.png" alt="かなどう動物病院へのリンク">
-        <p>kanadou petclinic</p>
-      </a>
-      <a class="section-work__link-box">
-        <img src="assets/image/work/sugutabe/work02.png" alt="スグ食べへのリンク">
-        <p>sugutabe</p>
-      </a>
-      <a class="section-work__link-box">
-        <img src="assets/image/work/kanadou/work01.png" alt="ポートフォリオへのリンク">
-        <p>portfolio</p>
-      </a>
-
-      <!--viewmoreのリンク-->
-      <div class="section-work__link-box">
+      <div class="section-work__contain">
+        <a href="kanadou.html" class="section-work__contain__linkbox">
+          <img src="assets/image/work/kanadou/work01.png" alt="かなどう動物病院へのリンク">
+          <p>kanadou petclinic</p>
+        </a>
+        <a href="sugutabe.html" class="section-work__contain__linkbox">
+          <img src="assets/image/work/sugutabe/work02.png" alt="スグ食べへのリンク">
+          <p>sugutabe</p>
+        </a>
+        <a class="section-work__contain__linkbox">
+          <img src="assets/image/work/kanadou/work01.png" alt="ポートフォリオへのリンク">
+          <p>portfolio</p>
+        </a>
       </div>
-
+      <!--viewmoreのリンク-->
+      <div class="section-work__link btnarrow">
+        <a class="btnarrow__more" href="#">view more</a>
+      </div>
     </section>
     <header class="sidebar">
       <ol class="sidebar__list">
-        <li><a href="#">Top</a></li>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Skill</a></li>
-        <li><a href="#">Work</a></li>
+        <li><a class="sidebar__list__link" href="#">Top</a></li>
+        <li><a class="sidebar__list__link" href="#aboutme">About me</a></li>
+        <li><a class="sidebar__list__link" href="#skill">Skill</a></li>
+        <li><a class="sidebar__list__link" href="#work">Work</a></li>
       </ol>
-      <div>
-        <a href="#">twitter</a>
+      <div class="sidebar__snslink">
+        <a href="https://twitter.com/ryo_studydesign" target="blank">twitter</a>
         <p>/</p>
-        <a href="#">note</a>
+        <a href="https://note.com/webdesign_ryo/" target="blank">note</a>
       </div>
     </header>
+    <small>©︎ 2021 HidaRyoko</small>
   </body>
 </html>

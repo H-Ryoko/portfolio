@@ -1,0 +1,279 @@
+.title {
+  font-size: 8vw;
+  font-style: italic;
+  color: #b4b4b4;
+  margin-bottom: 3vw;
+}
+
+.btnarrow {
+  text-align: right;
+  margin-right: 20vw;
+}
+
+.btnarrow__more {
+  position: relative;
+  background: #192f60;
+  padding: 15px 75px 15px 50px;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+  color: #fff;
+  text-decoration: none;
+  border: transparent 2px solid;
+  outline: none;
+  font-size: 1.5vw;
+  border-radius: 8px;
+}
+
+.btnarrow__more:hover {
+  background: #fdffff;
+  color: #333;
+  border-color: #192f60;
+}
+
+.btnarrow__more:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 20px;
+  height: 1px;
+  background: #fff;
+}
+
+.btnarrow__more:after {
+  content: '';
+  position: absolute;
+  top: 43.5%;
+  right: 12px;
+  border: 4px solid transparent;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-color: #fff;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.btnarrow__more:hover::before {
+  background: #333;
+  right: 25px;
+}
+
+.btnarrow__more:hover::after {
+  border-left-color: #333;
+  right: 20px;
+}
+
+.section-top {
+  position: relative;
+  height: 100vh;
+  padding: 0 100px;
+}
+
+.section-top h1 {
+  font-size: 5vw;
+  font-weight: 800;
+  font-style: italic;
+  padding-top: 50vh;
+  text-align: right;
+  line-height: 5vw;
+  color: #192f60;
+}
+
+.section-top h1 span {
+  font-size: 8vw;
+}
+
+.sidebar {
+  position: absolute;
+  top: 8vw;
+  left: 0;
+  padding-left: 100px;
+  width: 20%;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__list li {
+  margin-bottom: 50px;
+}
+
+.sidebar__list__link {
+  color: #333;
+  text-decoration: none;
+  font-size: 3.5rem;
+  font-weight: 300;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.sidebar__snslink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sidebar__snslink a {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: 'IBM Plex Mono', monospace;
+  text-decoration: none;
+  color: #333;
+  margin-right: 1.5rem;
+}
+
+.sidebar__snslink p {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+}
+
+.section-aboutme {
+  padding: 0 100px;
+  margin-bottom: 15vw;
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.section-aboutme__profile {
+  margin-left: 10vw;
+  margin-bottom: 3vw;
+  line-height: 2.5vw;
+}
+
+.section-aboutme__avispa {
+  margin-left: 10vw;
+  margin-bottom: 20px;
+  line-height: 2.5vw;
+}
+
+.section-skill {
+  padding: 0 100px;
+  margin-bottom: 15vw;
+}
+
+.section-skill__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 100px;
+}
+
+.section-skill__cards__contain {
+  width: 250px;
+  height: 300px;
+  background-color: #fff;
+  border: solid 15px #c1e4e9;
+  margin: 15px;
+  border-radius: 20px;
+}
+
+.section-skill__cards__contain__first {
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: #c1e4e9;
+  text-align: center;
+}
+
+.section-skill__cards__contain__first__imgbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-skill__cards__contain__first__imgbox img {
+  width: 20%;
+}
+
+.section-skill__cards__contain__first__singleimg {
+  width: 20%;
+}
+
+.section-skill__cards__contain__first__title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.section-skill__cards__contain__description {
+  width: 90%;
+  margin: 25px auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.section-skill__cards__contain:last-child {
+  width: 250px;
+  height: 50px;
+  background-color: #fdffff;
+  border: none;
+}
+
+.section-skill .btnarrow {
+  width: 250px;
+  text-align: left;
+  margin: 15px;
+  padding: 15px;
+}
+
+.section-work {
+  padding: 0 100px;
+  margin-bottom: 10vw;
+}
+
+.section-work__contain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 100px;
+}
+
+.section-work__contain__linkbox {
+  width: 40%;
+  margin-bottom: 2vw;
+}
+
+.section-work__contain__linkbox img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-work__contain__linkbox p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.section-work .btnarrow {
+  margin: 0 0 0 auto;
+}
+
+small {
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}

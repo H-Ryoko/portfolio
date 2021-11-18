@@ -7,23 +7,18 @@ html {
 }
 
 body {
-  color: #3a3a3a; /* RGB */
-  font-family:  'M PLUS Rounded 1c', sans-serif , 'M PLUS 1p', sans-serif;
+  background-color: #fdffff; /* RGB */
+  font-family: 'IBM Plex Mono', monospace, 'Zen Kaku Gothic New', sans-serif;
   font-weight: 500;
-  font-size: 1.6em;
-  line-height: 2.4rem;
-  text-align: center;
-  background-color: #fdfff6
-}
-
-section h2 {
-  font-size: 2.4rem;
+  text-align: left;
+  color: #333;
 }
 
 a {
   display: inline-block;
   transition: .3s;
   transform: scale(1);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 a:hover {
@@ -35,7 +30,13 @@ a:hover {
   display: none;
 }
 
+h1 h2 h3 h4 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
 p {
   font-feature-settings: normal;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
+
 
