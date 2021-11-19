@@ -1,0 +1,18 @@
+//タイトルの装飾
+.title-skyblue {
+    font: {
+      size: $titleFontSize;
+      style: italic;
+    }
+    color: $acsentColor;
+    margin-bottom: 3vw;
+  }
+  
+.title {
+    font: {
+        size: $titleFontSize;
+        style: italic;
+    }
+    color: $titleFontColor;
+    margin-bottom: 3vw;
+}

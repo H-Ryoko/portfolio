@@ -1,0 +1,114 @@
+$bgColor: #fdffff;
+$acsentColor: #c1e4e9;
+$pointColor: #192f60;
+$titleFontSize: 8vw;
+$titleFontColor: #b4b4b4;
+
+@mixin pc {
+  @media(min-width: 700px) {
+      @content;
+  }
+}
+@mixin tb {
+  @media(min-width: 700px)  and (max-width: 1000px) {
+      @content;
+  }
+}
+@mixin mb {
+  @media(max-width: 700px) {
+      @content;
+  }
+}
+
+//矢印リンクの装飾
+@import "linkarrow";
+//タイトルの装飾
+@import "title";
+
+//作品の概要部分の装飾
+.section-introduce {
+  padding: 5vw 100px;
+  a {
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+  }
+  &__attention {
+    font: {
+      size: 1.5rem;
+      weight: 400;
+    }
+    color: $pointColor;
+    line-height: 2rem;
+    margin-bottom: 1.5vw;
+  }
+  &__description {
+    font: {
+      size: 1.5rem;
+      weight: 500;
+    }
+    line-height: 2rem;
+    margin-bottom: 5vw;
+  }
+  &__image {
+    text-align: right;
+    margin-bottom: 5vw;
+    img {
+      width: 600px;
+    }
+  }
+}
+//詳細の装飾
+.section-description {
+  padding: 0 100px;
+  margin-bottom: 5vw;
+  &__contain {
+    margin-bottom: 3rem;
+    h2 {
+      font: {
+        size: 1.8rem;
+        weight: 600;
+      }
+      margin-bottom: 1rem;
+    }
+    p {
+      padding-right: 15vw;
+      font: {
+        size: 1.5rem;
+        weight: 400;
+      }
+      line-height: 2.5rem;
+    }
+    padding: 1rem 2rem;
+    border-left: solid 10px $acsentColor;
+
+  }
+}
+//スクリーンショットの装飾
+.section-image {
+  margin: 0 100px 3vw 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  &__screenshot {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding: 20px;
+    &__pc {
+      width: 70%;
+      object-fit: contain;
+      padding-right: 10px;
+    }
+    &__mb {
+      width: 25%;
+      object-fit: contain;
+    }
+  }
+}
+.btnarrow-back {
+  padding: 0 100px;
+  margin-bottom: 20px;
+}

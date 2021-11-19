@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>スグ食べ</title>
     <link rel="stylesheet" href="assets/css/work.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+				$("#scrolltop").load("toparrow.html");
+			});
+		</script>
   </head>
   <body>
-    <h1>Work</h1>
     <section class="section-introduce">
-      <a>「スグ食べ」（https://haru926.jp/sugutabe/）</a>
+      <h1 class="title-skyblue">Work</h1>
+      <a href="https://haru926.jp/sugutabe/" target="brank">「スグ食べ」（https://haru926.jp/sugutabe/）</a>
       <p class="section-introduce__description">
         WEBデザイナー養成スクール「デジタルハリウッドSTUDIO」での中間課題制作（LP）です。
       </p>
-      <img src="assets/image/work/sugutabe/work02.png" alt="かなどう動物病院">
-    </section>
+      <div class="section-introduce__image">
+        <img src="assets/image/work/sugutabe/work02.png" alt="かなどう動物病院">
+      </div>
+      </section>
     <section class="section-description">
       <div class="section-description__contain">
         <h2>制作期間</h2>
@@ -39,8 +50,20 @@
       </div>
     </section>
     <section class="section-image">
-      <img src="assets/image/work/sugutabe/sugutabe.png" alt="スグ食べの画像">
+      <div class="section-image__screenshot">
+        <img class="section-image__screenshot__pc" src="assets/image/work/sugutabe/sugutabe.png" alt="スグ食べの画像">
+        <img class="section-image__screenshot__mb" src="assets/image/work/sugutabe/sugutabe-mb.png" alt="">
+      </div>
     </section>
+    <!--backlistのリンク-->
+    <div class="btnarrow-back">
+      <a class="btnarrow-back__more" href="worklist.html">back to list</a>
+    </div>
+    <!--backtopのリンク-->
+    <div class="btnarrow-back">
+      <a class="btnarrow-back__more" href="index.html">back to top</a>
+    </div>
+    <div id="scrolltop"></div>
     <small>©︎ 2021 HidaRyoko</small>
   </body>
 </html>

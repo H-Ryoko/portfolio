@@ -10,6 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>樋田涼子のポートフォリオ</title>
     <link rel="stylesheet" href="assets/css/top.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $(function(){
+        $("#worklist").load("work.html");
+        $("#scrolltop").load("toparrow.html");
+      });
+    </script>
   </head>
   <body>
     <section class="section-top">
@@ -46,7 +53,7 @@
             <p class="section-skill__cards__contain__first__title">WordPress</p>
           </div>
           <p class="section-skill__cards__contain__description">
-            現在勉強中です。<br>卒業制作ではブログページをWordPressで作成し、静的サイトを連携することに挑戦しました。
+            現在勉強中です。<br>卒業制作ではブログページをWordPressで作成し、静的サイトと連携しました。
           </p>
         </div>
         <div class="section-skill__cards__contain">
@@ -91,23 +98,11 @@
     </section>
     <section id="work" class="section-work">
       <h2 class="title">Work</h2>
-      <div class="section-work__contain">
-        <a href="kanadou.html" class="section-work__contain__linkbox">
-          <img src="assets/image/work/kanadou/work01.png" alt="かなどう動物病院へのリンク">
-          <p>kanadou petclinic</p>
-        </a>
-        <a href="sugutabe.html" class="section-work__contain__linkbox">
-          <img src="assets/image/work/sugutabe/work02.png" alt="スグ食べへのリンク">
-          <p>sugutabe</p>
-        </a>
-        <a class="section-work__contain__linkbox">
-          <img src="assets/image/work/kanadou/work01.png" alt="ポートフォリオへのリンク">
-          <p>portfolio</p>
-        </a>
-      </div>
+      <!--jQueryでwork部分を読み込み-->
+      <div id="worklist"></div>
       <!--viewmoreのリンク-->
       <div class="section-work__link btnarrow">
-        <a class="btnarrow__more" href="#">view more</a>
+        <a class="btnarrow__more" href="worklist.html">view more</a>
       </div>
     </section>
     <header class="sidebar">
@@ -123,6 +118,8 @@
         <a href="https://note.com/webdesign_ryo/" target="blank">note</a>
       </div>
     </header>
+    <div id="scrolltop"></div>
     <small>©︎ 2021 HidaRyoko</small>
+    <script src="./assets/js/global.js"></script>
   </body>
 </html>

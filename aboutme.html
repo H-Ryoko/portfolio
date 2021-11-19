@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about me</title>
+    <title>樋田涼子について</title>
     <link rel="stylesheet" href="assets/css/aboutme.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+				$("#scrolltop").load("toparrow.html");
+			});
+		</script>
   </head>
   <body>
     <section class="section-top">
-      <h1>About me</h1>
+      <h1 class="title-skyblue">About me</h1>
       <div class="section-top__profile">
-        <img src="#" alt="樋田涼子の写真">
+        <img src="assets/image/aboutme.png" alt="樋田涼子の写真">
         <div class="section-top__profile__description">
           <h2>プロフィール</h2>
           <p class="section-top__profile__description__first">
@@ -28,24 +37,24 @@
     </section>
     <section class="section-strong">
       <div class="section-strong__contain">
-        <p>
-          日頃から「より良くするにはどうすればいいか」を意識しています。<br>大学生の頃はマーケティングに特化したゼミに入り、
-          「もっと商品/サービスを売るにはどうすれば良いか」の研究と調査を行ってきました。<br>コーディングにおいても、自分の
-          できる範囲で最も効率的にコードを書くにはどのようにすれば良いかを探しながら進めることを心がけています。
-        </p>
         <div class="section-strong__contain__point">
-          <h3>Make it better</h3>
+          <h3>Logical thinking</h3>
         </div>
+        <p>
+          日頃から「現状をより良くするにはどうすればいいか」を意識しています。<br>大学生の頃はマーケティングに特化したゼミに入り、<br>
+          「どうすればもっと商品/サービスが良くなるか」などの調査を行ってきました。<br>制作においても、<br>
+          「なぜこの処理でエラーが出るのか」「なぜこのデザインは伝わりやすいのか」というように疑問に思うことを大切にしています。
+        </p>
       </div>
-      <div class="section-strong__contain">
+      <!--<div class="section-strong__contain">
         <div class="section-strong__contain__point">
-          <h3>Logical<br>thinking</h3>
+          <h3>Logical<br>&nbsp;thinking</h3>
         </div>
         <p>
           何事もいきなり行動するのではなく、一度状況を客観的に捉えて原因を見つけてから解決策を考えることを心がけています。<br>
-          制作においても、<br>「なぜこの処理で動かないのか」<br>「なぜこのデザインは伝わりやすいのか」<br>というように疑問に思うことを大切にしています。
         </p>
       </div>
+    -->
     </section>
     <section class="section-favorite">
       <h2>好きなこと</h2>
@@ -93,6 +102,15 @@
         </li>
       </ul>
     </section>
+    <!--GitHubのリンク-->
+    <div class="btnarrow">
+      <a class="btnarrow__more" href="https://github.com/H-Ryoko" target="blank">contact me</a>
+    </div>
+    <!--backtopのリンク-->
+    <div class="btnarrow-back">
+      <a class="btnarrow-back__more" href="index.html">back to top</a>
+    </div>
+    <div id="scrolltop"></div>
     <small>©︎ 2021 HidaRyoko</small>
   </body>
 </html>

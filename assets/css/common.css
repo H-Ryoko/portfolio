@@ -19,6 +19,8 @@ a {
   transition: .3s;
   transform: scale(1);
   font-family: 'Zen Kaku Gothic New', sans-serif;
+  text-decoration: none;
+  color: #333;
 }
 
 a:hover {
@@ -37,6 +39,30 @@ h1 h2 h3 h4 {
 p {
   font-feature-settings: normal;
   font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+small {
+  font-size: 1.5rem;
+  font-weight: 300;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.scroll-top {
+  width: 35px;
+  height: 35px;
+  border: solid 4px #c1e4e9;
+  cursor: pointer;
+  text-align: right;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  padding: 8px;
+}
+
+.scroll-top a img {
+  width: 100%;
 }
 
 

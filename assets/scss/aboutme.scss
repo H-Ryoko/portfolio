@@ -1,0 +1,159 @@
+$bgColor: #fdffff;
+$acsentColor: #c1e4e9;
+$pointColor: #192f60;
+$titleFontSize: 8vw;
+$titleFontColor: #b4b4b4;
+
+@mixin pc {
+  @media(min-width: 700px) {
+    @content;
+  }
+}
+@mixin tb {
+  @media(min-width: 700px)  and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mb {
+  @media(max-width: 700px) {
+    @content;
+  }
+}
+//タイトルの装飾
+@import "title";
+//矢印リンクの装飾
+@import "linkarrow";
+
+//プロフィールの装飾
+.section-top {
+  padding: 5vw 100px 0 100px;
+  margin-bottom: 10vw;
+  &__profile {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    img {
+      width: 30%;
+    }
+    &__description {
+      width: 65%;
+      h2 {
+        font: {
+          size: 1.8vw;
+          weight: 600;
+        }
+        padding: 1rem 1rem;
+        border-left: solid 10px $acsentColor;
+        margin-bottom: 15px;
+      }
+      &__first {
+        font: {
+          size: 1.3vw;
+          weight: 400;
+        }
+        line-height: 2vw;
+        margin-bottom: 20px;
+      }
+      &__second {
+        font: {
+          size: 1.3vw;
+          weight: 400;
+        }
+        line-height: 2vw;
+      }
+    }
+  }
+}
+//強みの装飾
+.section-strong {
+  padding: 0 100px;
+  margin-bottom: 10vw;
+  &__contain {
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    p {
+      width: 60%;
+      line-height: 2vw;
+      font: {
+        size: 1.2vw;
+        weight: 400;
+      }
+      padding-left: 50px;
+    }
+    &__point {
+      width: 40%;
+      height: 15vw;
+      border-radius: 100px 0 100px 0;
+      text-align: center;
+      font: {
+        size: 2.5vw;
+        weight: 700;
+        style: italic;
+      }
+      line-height: 15vw;
+      color: $pointColor;
+      background-color: $acsentColor;
+    }
+  }
+}
+//趣味部分の装飾
+.section-favorite, .section-after {
+  padding: 0 100px;
+  margin-bottom: 5vw;
+  h2 {
+    font: {
+      size: 1.6vw;
+      weight: 600;
+    }
+    padding: 1rem 1rem;
+    border-left: solid 10px $acsentColor;
+    margin-bottom: 2vw;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    li {
+      width: 35%;
+      padding-right: 2vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      img {
+        width: 10%;
+      }
+      p {
+        width: 83%;
+        font: {
+          size: 1.3vw;
+          weight: 400;
+        }
+        line-height: 2.5vw;
+        span {
+          font: {
+            size: 1.6vw;
+            weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+.section-after {
+  margin-bottom: 10vw;
+}
+.btnarrow {
+  padding: 0 100px;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+.btnarrow-back {
+  padding: 0 100px;
+  margin-bottom: 5vw;
+}
+

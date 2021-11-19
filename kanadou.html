@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>かなどう動物病院</title>
     <link rel="stylesheet" href="assets/css/work.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>
+			$(function(){
+				$("#scrolltop").load("toparrow.html");
+			});
+		</script>
   </head>
   <body>
-    <h1>Work</h1>
     <section class="section-introduce">
-      <a>「かなどう動物病院」（https://haru926.jp/kadai_dhf/）</a>
+      <h1 class="title-skyblue">Work</h1>
+      <a href="https://haru926.jp/kadai_dhf/" target="blank">「かなどう動物病院」（https://haru926.jp/kadai_dhf/）</a>
       <p class="section-introduce__attention">
         ※想像リニューアルのため、BASIC認証をかけています。<br>ID: kanadou<br>PW: petclinic-graduate
       </p>
       <p class="section-introduce__description">
         WEBデザイナー養成スクール「デジタルハリウッドSTUDIO」での卒業制作です。
       </p>
-      <img src="assets/image/work/kanadou/work01.png" alt="かなどう動物病院">
+      <div class="section-introduce__image">
+        <img src="assets/image/work/kanadou/work01.png" alt="かなどう動物病院">
+    </div>
     </section>
     <section class="section-description">
       <div class="section-description__contain">
@@ -43,12 +54,24 @@
       </div>
     </section>
     <section class="section-image">
-      <img src="assets/image/work/kanadou/top.png" alt="トップページの画像">
-      <img src="assets/image/work/kanadou/clinic.png" alt="病院紹介ページの画像">
-      <img src="assets/image/work/kanadou/consulation.png" alt="診療紹介ページの画像">
-      <img src="assets/image/work/kanadou/news.png" alt="ブログページの画像">
-      <img src="assets/image/work/kanadou/qa.png" alt="質問ページの画像">
+      <div class="section-image__screenshot">
+        <img class="section-image__screenshot__pc" src="assets/image/work/kanadou/top.png" alt="トップページの画像">
+        <img class="section-image__screenshot__mb" src="assets/image/work/kanadou/top-mb.png" alt="病院紹介ページの画像">
+      </div>
+      <div class="section-image__screenshot">
+        <img class="section-image__screenshot__pc" src="assets/image/work/kanadou/consulation.png" alt="診療紹介ページの画像">
+        <img class="section-image__screenshot__mb" src="assets/image/work/kanadou/consulation-mb.png" alt="ブログページの画像">
+      </div>
     </section>
+    <!--backlistのリンク-->
+    <div class="btnarrow-back">
+      <a class="btnarrow-back__more" href="worklist.html">back to list</a>
+    </div>
+    <!--backtopのリンク-->
+    <div class="btnarrow-back">
+      <a class="btnarrow-back__more" href="index.html">back to top</a>
+    </div>
     <small>©︎ 2021 HidaRyoko</small>
+    <div id="scrolltop"></div>
   </body>
 </html>

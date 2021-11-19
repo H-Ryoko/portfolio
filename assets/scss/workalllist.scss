@@ -1,0 +1,31 @@
+$bgColor: #fdffff;
+$acsentColor: #c1e4e9;
+$pointColor: #192f60;
+$titleFontSize: 8vw;
+$titleFontColor: #b4b4b4;
+
+@mixin pc {
+  @media(min-width: 700px) {
+    @content;
+  }
+}
+@mixin tb {
+  @media(min-width: 700px)  and (max-width: 1000px) {
+    @content;
+  }
+}
+@mixin mb {
+  @media(max-width: 700px) {
+    @content;
+  }
+}
+
+//タイトルの装飾
+@import "title";
+//一覧表示部分の装飾
+.section-work {
+  padding: 5vw 100px;
+  @import "worklist";
+}
+
+@import "linkarrow";
