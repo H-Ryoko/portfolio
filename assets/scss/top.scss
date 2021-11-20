@@ -39,10 +39,23 @@ $titleFontColor: #b4b4b4;
     text-align: right;
     line-height: 5vw;
     color: $pointColor;
-    span {
+    animation-name: fadeLeftAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+      span {
       font-size: 8vw;
     }
   }
+  @keyframes fadeLeftAnime {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
 }
 //headerの装飾
 .sidebar {
@@ -51,6 +64,9 @@ $titleFontColor: #b4b4b4;
   left: 0;
   padding-left: 100px;
   width: 15%;
+  animation-name: fadeRightAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
   &__list {
     list-style: none;
     li {
@@ -69,15 +85,24 @@ $titleFontColor: #b4b4b4;
     justify-content: flex-start;
     a {
       font: {
-        size: 1.5vw;
+        size: 1.3vw;
         weight: 300;
         family: 'IBM Plex Mono', monospace;
       }
       margin-right: 1.5rem;
     }
     p {
-      font-size: 1.5vw;
+      font-size: 1.3vw;
       margin-right: 1.5rem;
+    }
+  }
+  @keyframes fadeRightAnime {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(0);
     }
   }
 }
@@ -111,6 +136,11 @@ $titleFontColor: #b4b4b4;
     justify-content: space-between;
     align-items: flex-end;
     margin-left: 15vw;
+    list-style: none;
+    animation-name: fadeUpAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     &__contain {
       width: 230px;
       height: 300px;
@@ -166,7 +196,26 @@ $titleFontColor: #b4b4b4;
     margin: 15px;
     padding: 15px;
   }
+  .fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 //workの装飾
 @import "worklist";
+.section-work__contain {
+  margin-left: 210px;
+}
 
