@@ -6,13 +6,31 @@
     }
     color: $acsentColor;
     margin-bottom: 3vw;
-  }
-  
-.title {
-    font: {
-        size: $titleFontSize;
-        style: italic;
+    //タブレット版
+    @include tb {
+      margin-bottom: 3rem;
     }
-    color: $titleFontColor;
-    margin-bottom: 3vw;
+    //モバイル版
+    @include mb {
+      font-size: $mbTitleFontSize;
+      margin-bottom: 2rem;
+    }
+  }
+
+.title {
+  font: {
+      size: $titleFontSize;
+      style: italic;
+  }
+  color: $titleFontColor;
+  margin-bottom: 3vw;
+  //タブレット版
+  @include tb {
+    margin-bottom: 3rem;
+  }
+  //モバイル版
+  @include mb {
+    font-size: $mbTitleFontSize;
+    margin-bottom: 2rem;
+  }
 }

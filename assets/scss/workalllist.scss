@@ -2,6 +2,8 @@ $bgColor: #fdffff;
 $acsentColor: #c1e4e9;
 $pointColor: #192f60;
 $titleFontSize: 8vw;
+$mbTitleFontSize: 4rem;
+
 $titleFontColor: #b4b4b4;
 
 @mixin pc {
@@ -22,11 +24,16 @@ $titleFontColor: #b4b4b4;
 
 //タイトルの装飾
 @import "title";
+
 //一覧表示部分の装飾
 .section-work {
   padding: 5vw 100px;
-  @import "worklist";
+  margin-bottom: 5vw;
   &__contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
     animation-name: fadeUpAnime;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -40,7 +47,48 @@ $titleFontColor: #b4b4b4;
         opacity: 1;
         transform: translateY(0);
       }
-    }  
+    }
+    &__linkbox {
+      width: 40%;
+      margin-bottom: 2vw;
+      text-decoration: none;
+      color: #333;
+      img {
+        width: 100%;
+        margin: 0 auto;
+      }
+      p {
+        font: {
+          size: 1.5vw;
+          weight: 500;
+        }
+      }
+    }
+  }
+  .btnarrow {
+    margin: 0 0 0 auto;
+  }
+  @include tb {
+    &__contain {
+      &__linkbox {
+        width: 45%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @include mb {
+    padding: 40px 50px;
+    margin-bottom: 0;
+    &__contain {
+      flex-direction: column;
+      &__linkbox {
+        width: 100%;
+        margin-bottom: 40px;
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
   }
 }
 

@@ -2,6 +2,7 @@ $bgColor: #fdffff;
 $acsentColor: #c1e4e9;
 $pointColor: #192f60;
 $titleFontSize: 8vw;
+$mbTitleFontSize: 4rem;
 $titleFontColor: #b4b4b4;
 
 @mixin pc {
@@ -22,8 +23,10 @@ $titleFontColor: #b4b4b4;
 
 //矢印リンクの装飾
 @import "linkarrow";
+
 //タイトルの装飾
 @import "title";
+
 //topの装飾
 .section-top {
   position: relative;
@@ -55,8 +58,22 @@ $titleFontColor: #b4b4b4;
       transform: translateX(0);
     }
   }
-
+//topのモバイル版
+  @include mb {
+    padding: 0 50px;
+    text-align: right;
+    h1 {
+      font-size: 4rem;
+      line-height: 6rem;
+      padding-top: 40vh;
+      span {
+        font-size: 5.5rem;
+      }
+    }
+  }
 }
+
+
 //headerの装飾
 .sidebar {
   position: fixed;
@@ -89,11 +106,10 @@ $titleFontColor: #b4b4b4;
         weight: 300;
         family: 'IBM Plex Mono', monospace;
       }
-      margin-right: 1.5rem;
     }
     p {
       font-size: 1.3vw;
-      margin-right: 1.5rem;
+      margin: 0 1rem;
     }
   }
   @keyframes fadeRightAnime {
@@ -105,7 +121,32 @@ $titleFontColor: #b4b4b4;
       transform: translateX(0);
     }
   }
+  //タブレット版
+  @include tb {
+    padding-left: 50px;
+    &__list {
+      li {
+        margin-bottom: 2.5rem;
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+    &__snslink {
+      a {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    display: none;
+  }
 }
+
 //aboutmeの装飾
 .section-aboutme {
   padding: 0 100px;
@@ -115,17 +156,49 @@ $titleFontColor: #b4b4b4;
     size: 1.5vw;
     weight: 400;
   }
-&__profile {
+  line-height: 2.5vw;
+  &__profile {
     margin-left: 10vw;
     margin-bottom: 3vw;
-    line-height: 2.5vw;
   }
   &__avispa {
     margin-left: 10vw;
     margin-bottom: 20px;
-    line-height: 2.5vw;
+  }
+  //タブレット版
+  @include tb {
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+    &__profile {
+      margin-left: 10rem;
+      margin-bottom: 10px;
+    }
+    &__avispa {
+      margin-left: 10rem;
+    }
+    .btnarrow {
+      margin-right: 0;
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 80px;
+    &__profile {
+      margin-left: 0;
+    }
+    &__avispa {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+    .btnarrow {
+      margin-right: 0;
+    }
   }
 }
+
 //skillの装飾
 .section-skill {
   padding: 0 100px;
@@ -143,7 +216,7 @@ $titleFontColor: #b4b4b4;
     opacity: 0;
     &__contain {
       width: 230px;
-      height: 300px;
+      height: 350px;
       background-color: #fff;
       border: solid 15px $acsentColor;
       margin: 15px;
@@ -159,16 +232,20 @@ $titleFontColor: #b4b4b4;
           justify-content: center;
           img {
             width: 20%;
+            margin-bottom: 10px;
           }
         }
         &__singleimg {
           width: 20%;
+          img {
+            margin-bottom: 10px;
+          }
         }
         &__title {
           text-align: center;
           margin-bottom: 10px;
           font: {
-            size: 1.5vw;
+            size: 1.8rem;
             weight: 600;
           }
         }
@@ -212,10 +289,80 @@ $titleFontColor: #b4b4b4;
       transform: translateY(0);
     }
   }
+  @include tb {
+    &__cards {
+      &__contain {
+        border: solid 8px $acsentColor;
+        width: 170px;
+        height: 250px;
+        margin: 5px;
+        &__first {
+          padding-bottom: 3px;
+          &__title {
+            font-size: 1.5rem;
+            margin-top: 5px;
+          }
+        }
+        &__description {
+          margin: 10px auto;
+          font-size: 1.3rem;
+          line-height: 2.3rem;
+        }
+      }
+      .btnarrow {
+        width: 170px;
+        margin: 5px;
+        padding: 8px;
+        text-align: right;
+      }
+    }
+  }
+  @include mb {
+    padding: 0 50px;
+    margin-bottom: 80px;
+    &__cards {
+      flex-direction: column;
+      margin-left: 0;
+      &__contain {
+        border: solid 8px $acsentColor;
+        width: 90%;
+        height: 280px;
+        margin: 15px;
+        &__first {
+          padding-bottom: 3px;
+          &__title {
+            font-size: 1.8rem;
+            margin-top: 5px;
+          }
+        }
+        &__description {
+          margin: 10px auto;
+          font-size: 1.5rem;
+          line-height: 2.5rem;
+        }
+      }
+      .btnarrow {
+        width: 170px;
+        margin: 5px;
+        padding: 8px;
+        text-align: right;
+      }
+    }
+  }
 }
+
 //workの装飾
 @import "worklist";
-.section-work__contain {
-  margin-left: 210px;
+.section-work {
+  margin-bottom: 130px;
+  &__contain {
+    margin-left: 210px;
+    @include tb {
+      margin-left: 100px;
+    }
+    @include mb {
+      margin-left: 0;
+    }
+  }
 }
 

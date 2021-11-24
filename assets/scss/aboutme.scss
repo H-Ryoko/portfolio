@@ -2,6 +2,8 @@ $bgColor: #fdffff;
 $acsentColor: #c1e4e9;
 $pointColor: #192f60;
 $titleFontSize: 8vw;
+$mbTitleFontSize: 4rem;
+
 $titleFontColor: #b4b4b4;
 
 @mixin pc {
@@ -63,7 +65,45 @@ $titleFontColor: #b4b4b4;
       }
     }
   }
+  //タブレット版
+  @include tb {
+    &__profile {
+      align-items: flex-start;
+      &__description {
+        h2 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 40px 50px;
+    &__profile {
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 80%;
+        margin-bottom: 30px;
+      }
+      &__description {
+        width: 100%;
+        h2 {
+          font-size: 1.8rem;
+        }
+        p {
+          font-size: 1.5rem;
+          line-height: 3rem;
+        }
+      }
+    }
+  }
 }
+
 //強みの装飾
 .section-strong {
   padding: 0 100px;
@@ -96,6 +136,41 @@ $titleFontColor: #b4b4b4;
       line-height: 15vw;
       color: $pointColor;
       background-color: $acsentColor;
+    }
+  }
+  //タブレット版
+  @include tb {
+    &__contain {
+      p {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+      }
+      &__point {
+        height: 200px;
+        line-height: 200px;
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+    &__contain {
+      flex-direction: column;
+      p {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        padding: 0;
+      }
+      &__point {
+        width: 100%;
+        height: 180px;
+        line-height: 180px;
+        margin-bottom: 30px;
+        h3 {
+          font-size: 2.5rem;
+        }
+      }
     }
   }
 }
@@ -157,6 +232,56 @@ $titleFontColor: #b4b4b4;
       }
     }
   }
+  //タブレット版
+  @include tb {
+    h2 {
+      font-size: 1.8rem;
+    }
+    &__list {
+      justify-content: space-around;
+      li {
+        width: 30%;
+        padding-right: 10px;
+        img {
+          width: 13%;
+        }
+        p {
+          width: 85%;
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+          span {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    &__list {
+      flex-direction: column;
+      li {
+        width: 100%;
+        margin-bottom: 30px;
+        img {
+          width: 13%;
+        }
+        p {
+          width: 82%;
+          font-size: 1.4rem;
+          line-height: 2.8rem;
+          span {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
 }
 .section-after {
   margin-bottom: 10vw;
@@ -165,9 +290,18 @@ $titleFontColor: #b4b4b4;
   padding: 0 100px;
   margin-right: 0;
   margin-bottom: 20px;
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+  }
 }
 .btnarrow-back {
   padding: 0 100px;
   margin-bottom: 5vw;
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
 }
 

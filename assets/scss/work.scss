@@ -2,6 +2,7 @@ $bgColor: #fdffff;
 $acsentColor: #c1e4e9;
 $pointColor: #192f60;
 $titleFontSize: 8vw;
+$mbTitleFontSize: 4rem;
 $titleFontColor: #b4b4b4;
 
 @mixin pc {
@@ -34,19 +35,19 @@ $titleFontColor: #b4b4b4;
   }
   &__attention {
     font: {
-      size: 1.5rem;
+      size: 1.8rem;
       weight: 400;
     }
     color: $pointColor;
-    line-height: 2rem;
+    line-height: 3rem;
     margin-bottom: 1.5vw;
   }
   &__description {
     font: {
-      size: 1.5rem;
+      size: 1.8rem;
       weight: 500;
     }
-    line-height: 2rem;
+    line-height: 3rem;
     margin-bottom: 5vw;
   }
   &__image {
@@ -56,7 +57,41 @@ $titleFontColor: #b4b4b4;
       width: 600px;
     }
   }
+  //タブレット版
+  @include tb {
+    a {
+      font-size: 2rem;
+    }
+    &__image {
+      img {
+        width: 350px;
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 40px 50px;
+    a {
+      font-size: 1.8rem;
+      line-height: 3rem;
+    }
+    &__attention {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+    }
+    &__description {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+    }
+    &__image {
+      margin-bottom: 50px;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
+
 //詳細の装飾
 .section-description {
   padding: 0 100px;
@@ -65,7 +100,7 @@ $titleFontColor: #b4b4b4;
     margin-bottom: 3rem;
     h2 {
       font: {
-        size: 1.8rem;
+        size: 2rem;
         weight: 600;
       }
       margin-bottom: 1rem;
@@ -73,14 +108,43 @@ $titleFontColor: #b4b4b4;
     p {
       padding-right: 15vw;
       font: {
-        size: 1.5rem;
+        size: 1.8rem;
         weight: 400;
       }
-      line-height: 2.5rem;
+      line-height: 3rem;
     }
     padding: 1rem 2rem;
     border-left: solid 10px $acsentColor;
-
+  }
+  //タブレット版
+  @include tb {
+    &__contain {
+      padding: 1rem 0;
+      padding-left: 2rem;
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        padding-right: 0;
+      }
+    }
+  }
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+    margin-bottom: 60px;
+    &__contain {
+      padding: 0.5rem 0;
+      padding-left: 1rem;
+      h2 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 2.8rem;
+        padding-right: 0;
+      }
+    }
   }
 }
 //スクリーンショットの装飾
@@ -107,8 +171,32 @@ $titleFontColor: #b4b4b4;
       object-fit: contain;
     }
   }
+  //タブレット版
+  @include tb {
+    flex-direction: column;
+    margin: 0 100px;
+    &__screenshot {
+      padding: 0;
+    }
+  }
+  //モバイル版
+  @include mb {
+    flex-direction: column;
+    margin: 0 50px;
+    &__screenshot {
+      padding: 0;
+    }
+  }
 }
 .btnarrow-back {
   padding: 0 100px;
   margin-bottom: 20px;
+  //モバイル版
+  @include mb {
+    padding: 0 50px;
+  }
+}
+
+small {
+  padding-top: 60px;
 }

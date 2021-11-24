@@ -27,5 +27,26 @@
   .btnarrow {
     margin: 0 0 0 auto;
   }
+  @include tb {
+    &__contain {
+      &__linkbox {
+        width: 45%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  @include mb {
+    padding: 0 50px;
+    &__contain {
+      flex-direction: column;
+      &__linkbox {
+        width: 100%;
+        margin-bottom: 40px;
+        p {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
 }
   
