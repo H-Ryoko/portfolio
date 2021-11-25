@@ -31,14 +31,17 @@ $titleFontColor: #b4b4b4;
   padding: 5vw 100px 0 100px;
   margin-bottom: 10vw;
   &__profile {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     img {
-      width: 30%;
+      width: 20%;
+      border-radius: 20px;
     }
     &__description {
-      width: 65%;
+      width: 75%;
       h2 {
         font: {
           size: 1.8vw;
@@ -68,8 +71,13 @@ $titleFontColor: #b4b4b4;
   //タブレット版
   @include tb {
     &__profile {
+      width: 100%;
       align-items: flex-start;
+      img {
+        width: 25%;
+      }
       &__description {
+        width: 70%;
         h2 {
           font-size: 1.8rem;
         }

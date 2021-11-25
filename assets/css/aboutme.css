@@ -207,23 +207,26 @@
 }
 
 .section-top__profile {
+  width: 90%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .section-top__profile img {
-  width: 30%;
+  width: 20%;
+  border-radius: 20px;
 }
 
 .section-top__profile__description {
-  width: 65%;
+  width: 75%;
 }
 
 .section-top__profile__description h2 {
@@ -249,9 +252,16 @@
 
 @media (min-width: 700px) and (max-width: 1000px) {
   .section-top__profile {
+    width: 100%;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .section-top__profile img {
+    width: 25%;
+  }
+  .section-top__profile__description {
+    width: 70%;
   }
   .section-top__profile__description h2 {
     font-size: 1.8rem;
