@@ -32,6 +32,7 @@ $titleFontColor: #b4b4b4;
   position: relative;
   height: 100vh;
   padding: 0 100px;
+  margin-bottom: 50px;
   h1 {
     font: {
       size: 5vw;
@@ -365,4 +366,116 @@ $titleFontColor: #b4b4b4;
     }
   }
 }
+
+//ハンバーガーメニューの装飾
+#header-nav {
+  display: none;
+}
+.nav-button {
+  display: none;
+}
+
+@include mb {
+  .hamburger-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    content: "";
+    width: 20%;
+    height: 60px;
+    border-radius: 0 20px 20px 0;
+    &__box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+      &__line {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: $pointColor;
+        transition: 0.7s;
+        z-index: 1010;
+      }
+    }
+  }
+  #line1 {
+    top: 0;
+  }
+  #line2 {
+    top: 13px;
+  }
+  #line3 {
+    top: 26px;
+  }
+  .active {
+    span:nth-child(1) {
+      transform: translateY(13px) rotate(-45deg);
+    }
+    span:nth-child(2) {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: 1s;
+    }
+    span:nth-child(3) {
+      transform: translateY(-13px) rotate(45deg);
+    }
+  }
+  #header-nav {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-150%);
+    transition: 1.5s;
+    .menu-box {
+      width: 100%;
+      height: 50vh;
+      padding: 50px 30px 30px 30px;
+      background-color: $bgColor;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 30%;
+        height: 100px;
+        object-fit: contain;
+      }
+      ul {
+        width: 80%;
+        padding-top: 30px;
+        list-style: none;
+        li {
+          text-align: left;
+          margin-bottom: 40px;
+          padding-bottom: 8px;
+          border-bottom: dashed 2px $pointColor;
+          a {
+            text-decoration: none;
+            color: $pointColor;
+            font: {
+              size: 2rem;
+              weight: 500;
+              family: 'IBM Plex Mono', monospace;
+            }
+          }
+        }
+      }
+    }
+    &.menu-in {
+      transform: translateY(0);
+      transition: 1.5s;
+    }
+  }
+}
+
+
 

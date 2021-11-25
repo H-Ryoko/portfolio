@@ -122,9 +122,10 @@ $titleFontColor: #b4b4b4;
       padding: 1rem 0;
       padding-left: 2rem;
       h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
       }
       p {
+        font-size: 1.5rem;
         padding-right: 0;
       }
     }
@@ -148,7 +149,7 @@ $titleFontColor: #b4b4b4;
   }
 }
 //スクリーンショットの装飾
-.section-image {
+.section-image, .section-image-portfolio {
   margin: 0 100px 3vw 100px;
   display: flex;
   flex-wrap: nowrap;
@@ -185,6 +186,18 @@ $titleFontColor: #b4b4b4;
     margin: 0 50px;
     &__screenshot {
       padding: 0;
+    }
+  }
+}
+.section-image-portfolio {
+  background-color: $titleFontColor;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  &__screenshot {
+    margin-bottom: 0;
+    &__mb {
+      width: 28%;
     }
   }
 }

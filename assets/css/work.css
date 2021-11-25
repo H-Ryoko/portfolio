@@ -297,9 +297,10 @@
     padding-left: 2rem;
   }
   .section-description__contain h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .section-description__contain p {
+    font-size: 1.5rem;
     padding-right: 0;
   }
 }
@@ -323,7 +324,7 @@
   }
 }
 
-.section-image {
+.section-image, .section-image-portfolio {
   margin: 0 100px 3vw 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,7 +338,7 @@
       justify-content: space-around;
 }
 
-.section-image__screenshot {
+.section-image__screenshot, .section-image-portfolio__screenshot {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -351,43 +352,58 @@
   padding: 20px;
 }
 
-.section-image__screenshot__pc {
+.section-image__screenshot__pc, .section-image-portfolio__screenshot__pc {
   width: 70%;
   -o-object-fit: contain;
      object-fit: contain;
   padding-right: 10px;
 }
 
-.section-image__screenshot__mb {
+.section-image__screenshot__mb, .section-image-portfolio__screenshot__mb {
   width: 25%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
-  .section-image {
+  .section-image, .section-image-portfolio {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 100px;
   }
-  .section-image__screenshot {
+  .section-image__screenshot, .section-image-portfolio__screenshot {
     padding: 0;
   }
 }
 
 @media (max-width: 700px) {
-  .section-image {
+  .section-image, .section-image-portfolio {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 50px;
   }
-  .section-image__screenshot {
+  .section-image__screenshot, .section-image-portfolio__screenshot {
     padding: 0;
   }
+}
+
+.section-image-portfolio {
+  background-color: #b4b4b4;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+}
+
+.section-image-portfolio__screenshot {
+  margin-bottom: 0;
+}
+
+.section-image-portfolio__screenshot__mb {
+  width: 28%;
 }
 
 .btnarrow-back {

@@ -1,3 +1,10 @@
+$(function(){
+    $('.hamburger-button__box').click(function(){
+        $(this).toggleClass('active');
+        $('#header-nav').toggleClass('menu-in');
+      });
+});
+
 $('a[href^="#"]').click(function(){
     var adjust = 50;
     var speed = 800;
