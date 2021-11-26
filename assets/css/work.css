@@ -219,7 +219,7 @@
 }
 
 .section-introduce__description {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
   line-height: 3rem;
   margin-bottom: 5vw;
@@ -238,6 +238,9 @@
   .section-introduce a {
     font-size: 2rem;
   }
+  .section-introduce__description {
+    font-size: 1.5rem;
+  }
   .section-introduce__image img {
     width: 350px;
   }
@@ -254,10 +257,12 @@
   .section-introduce__attention {
     font-size: 1.3rem;
     margin-bottom: 3rem;
+    line-height: 2rem;
   }
   .section-introduce__description {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 3rem;
+    line-height: 2.5rem;
   }
   .section-introduce__image {
     margin-bottom: 50px;

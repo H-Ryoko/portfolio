@@ -31,17 +31,18 @@ $titleFontColor: #b4b4b4;
   padding: 5vw 100px 0 100px;
   margin-bottom: 10vw;
   &__profile {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 20px;
     img {
-      width: 20%;
-      border-radius: 20px;
+      display: none;
+      width: 0;
     }
     &__description {
-      width: 75%;
+      width: 100%;
       h2 {
         font: {
           size: 1.8vw;
@@ -49,7 +50,7 @@ $titleFontColor: #b4b4b4;
         }
         padding: 1rem 1rem;
         border-left: solid 10px $acsentColor;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
       }
       h3 {
         font: {
@@ -83,16 +84,16 @@ $titleFontColor: #b4b4b4;
     &__profile {
       width: 100%;
       align-items: flex-start;
-      img {
-        width: 25%;
-      }
       &__description {
-        width: 70%;
+        width: 100%;
         h2 {
           font-size: 1.8rem;
         }
         h3 {
           font-size: 1.5rem;
+          span {
+            font-size: 1.3rem;
+          }
         }
         p {
           font-size: 1.3rem;
@@ -115,6 +116,12 @@ $titleFontColor: #b4b4b4;
         width: 100%;
         h2 {
           font-size: 1.8rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+          span {
+            font-size: 1.3rem;
+          }
         }
         p {
           font-size: 1.5rem;

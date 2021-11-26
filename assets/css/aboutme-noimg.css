@@ -207,7 +207,7 @@
 }
 
 .section-top__profile {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -218,15 +218,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 20px;
 }
 
 .section-top__profile img {
-  width: 20%;
-  border-radius: 20px;
+  display: none;
+  width: 0;
 }
 
 .section-top__profile__description {
-  width: 75%;
+  width: 100%;
 }
 
 .section-top__profile__description h2 {
@@ -234,7 +235,7 @@
   font-weight: 600;
   padding: 1rem 1rem;
   border-left: solid 10px #c1e4e9;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .section-top__profile__description h3 {
@@ -267,17 +268,17 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .section-top__profile img {
-    width: 25%;
-  }
   .section-top__profile__description {
-    width: 70%;
+    width: 100%;
   }
   .section-top__profile__description h2 {
     font-size: 1.8rem;
   }
   .section-top__profile__description h3 {
     font-size: 1.5rem;
+  }
+  .section-top__profile__description h3 span {
+    font-size: 1.3rem;
   }
   .section-top__profile__description p {
     font-size: 1.3rem;
@@ -307,6 +308,12 @@
   }
   .section-top__profile__description h2 {
     font-size: 1.8rem;
+  }
+  .section-top__profile__description h3 {
+    font-size: 1.5rem;
+  }
+  .section-top__profile__description h3 span {
+    font-size: 1.3rem;
   }
   .section-top__profile__description p {
     font-size: 1.5rem;
