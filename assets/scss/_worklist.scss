@@ -5,22 +5,26 @@
   &__contain {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 190px;
+    justify-content: flex-end;
     &__linkbox {
-      width: 40%;
-      margin-bottom: 2vw;
+      width: 35%;
+      margin-right: 4vw;
+      margin-bottom: 8vw;
       text-decoration: none;
       color: #333;
       img {
         width: 100%;
         margin: 0 auto;
       }
+      &__namecardimg {
+        height: 80%;
+      }
       p {
         font: {
           size: 1.5vw;
           weight: 500;
         }
+        padding-top: 1.3vw;
       }
     }
   }
@@ -30,7 +34,7 @@
   @include tb {
     &__contain {
       &__linkbox {
-        width: 45%;
+        width: 35%;
         margin-bottom: 40px;
       }
     }

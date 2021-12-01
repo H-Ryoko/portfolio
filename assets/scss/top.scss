@@ -206,22 +206,24 @@ $titleFontColor: #b4b4b4;
   padding: 0 100px;
   margin-bottom: 15vw;
   &__cards {
+    width: 70vw;
+    margin: 0 0 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: flex-end;
-    margin-left: 15vw;
     list-style: none;
     animation-name: fadeUpAnime;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     opacity: 0;
     &__contain {
-      width: 230px;
+      width: 20vw;
+      min-width: 230px;
       height: 350px;
       background-color: #fff;
-      border: solid 15px $acsentColor;
-      margin: 15px;
+      border: solid 10px $acsentColor;
+      margin: 0 20px 40px 0;
       border-radius: 20px;
       &__first {
         width: 100%;
@@ -254,12 +256,13 @@ $titleFontColor: #b4b4b4;
       }
       &__description {
         width: 90%;
-        margin: 25px auto;
+        padding: 8px;
+        margin: 0 auto;
         font: {
-          size: 1.5rem;
+          size: 1.9rem;
           weight: 400;
         }
-        line-height: 2.8rem;
+        line-height: 3rem;
       }
     }
     &__contain:last-child {
@@ -270,10 +273,10 @@ $titleFontColor: #b4b4b4;
     }
   }
   .btnarrow {
-    width: 230px;
+    width: 20vw;
     text-align: left;
-    margin: 15px;
-    padding: 15px;
+    margin: 0 20px 30px 0;
+    padding: 10px;
   }
   .fadeUp {
     animation-name: fadeUpAnime;
@@ -293,11 +296,13 @@ $titleFontColor: #b4b4b4;
   }
   @include tb {
     &__cards {
+      width: 75vw;
       &__contain {
         border: solid 8px $acsentColor;
+        min-width: initial;
         width: 170px;
         height: 250px;
-        margin: 5px;
+        margin: 8px;
         &__first {
           padding-bottom: 3px;
           &__title {
@@ -306,14 +311,13 @@ $titleFontColor: #b4b4b4;
           }
         }
         &__description {
-          margin: 10px auto;
           font-size: 1.3rem;
           line-height: 2.3rem;
         }
       }
       .btnarrow {
         width: 170px;
-        margin: 5px;
+        margin: 8px;
         padding: 8px;
         text-align: right;
       }
@@ -323,13 +327,14 @@ $titleFontColor: #b4b4b4;
     padding: 0 50px;
     margin-bottom: 80px;
     &__cards {
+      width: 100%;
       flex-direction: column;
       margin-left: 0;
       &__contain {
         border: solid 8px $acsentColor;
         width: 90%;
         height: 280px;
-        margin: 15px;
+        margin: 0 0 20px 0;
         &__first {
           padding-bottom: 3px;
           &__title {
@@ -338,7 +343,6 @@ $titleFontColor: #b4b4b4;
           }
         }
         &__description {
-          margin: 10px auto;
           font-size: 1.5rem;
           line-height: 2.5rem;
         }
@@ -357,15 +361,6 @@ $titleFontColor: #b4b4b4;
 @import "worklist";
 .section-work {
   margin-bottom: 130px;
-  &__contain {
-    margin-left: 210px;
-    @include tb {
-      margin-left: 100px;
-    }
-    @include mb {
-      margin-left: 0;
-    }
-  }
 }
 
 //ハンバーガーメニューの装飾

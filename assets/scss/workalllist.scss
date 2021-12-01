@@ -50,7 +50,7 @@ $titleFontColor: #b4b4b4;
     }
     &__linkbox {
       width: 40%;
-      margin-bottom: 2vw;
+      margin-bottom: 8vw;
       text-decoration: none;
       color: #333;
       img {
@@ -62,6 +62,10 @@ $titleFontColor: #b4b4b4;
           size: 1.5vw;
           weight: 500;
         }
+        padding-top: 1.3vw;
+      }
+      &__namecardimg {
+        height: 80%;
       }
     }
   }

@@ -17,7 +17,7 @@ $('a[href^="#"]').click(function(){
 function delayScrollAnime(){
     var time = 0.3;
     var value = time;
-    $('.section-skill__cards').each(function(){
+    $('.section-skill__cards, .section-skill__cards2').each(function(){
         var parent = this;
         var elemPos = $(this).offset().top;
         var scroll = $(window).scrollTop();

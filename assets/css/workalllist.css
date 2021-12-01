@@ -90,7 +90,7 @@
 
 .section-work__contain__linkbox {
   width: 40%;
-  margin-bottom: 2vw;
+  margin-bottom: 8vw;
   text-decoration: none;
   color: #333;
 }
@@ -103,6 +103,11 @@
 .section-work__contain__linkbox p {
   font-size: 1.5vw;
   font-weight: 500;
+  padding-top: 1.3vw;
+}
+
+.section-work__contain__linkbox__namecardimg {
+  height: 80%;
 }
 
 .section-work .btnarrow {

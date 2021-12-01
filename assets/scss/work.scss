@@ -47,7 +47,7 @@ $titleFontColor: #b4b4b4;
       size: 2rem;
       weight: 500;
     }
-    line-height: 3rem;
+    line-height: 4rem;
     margin-bottom: 5vw;
   }
   &__image {
@@ -177,12 +177,31 @@ $titleFontColor: #b4b4b4;
       object-fit: contain;
     }
   }
+  &__imgbox {
+    background-color: $titleFontColor;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    &__image {
+      width: 45%;
+      object-fit: contain;
+      margin: 10px;
+    }
+  }
   //タブレット版
   @include tb {
     flex-direction: column;
     margin: 0 100px;
     &__screenshot {
       padding: 0;
+    }
+    &__imgbox {
+      &__image {
+        width: 70%;
+      }
     }
   }
   //モバイル版
@@ -191,6 +210,13 @@ $titleFontColor: #b4b4b4;
     margin: 0 50px;
     &__screenshot {
       padding: 0;
+    }
+    &__imgbox {
+      flex-direction: column;
+      align-items: center;
+      &__image {
+        width: 90%;
+      }
     }
   }
 }
