@@ -308,6 +308,12 @@
   .section-top__profile__description h2 {
     font-size: 1.8rem;
   }
+  .section-top__profile__description h3 {
+    font-size: 1.5rem;
+  }
+  .section-top__profile__description h3 span {
+    font-size: 1.4rem;
+  }
   .section-top__profile__description p {
     font-size: 1.5rem;
     line-height: 3rem;
